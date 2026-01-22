@@ -19,12 +19,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shadow-md">
               <span className="text-primary-foreground font-display font-bold text-xl">SB</span>
             </div>
             <div>
               <h1 className="font-display font-bold text-xl text-foreground">Singhal Brothers</h1>
-              <p className="text-xs text-muted-foreground">Since 1998</p>
+              <p className="text-xs text-accent font-medium">Since 1998</p>
             </div>
           </div>
 
@@ -43,7 +43,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+919876543210" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+            <a href="tel:+919876543210" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
               <Phone className="w-4 h-4" />
               <span className="font-medium">+91 98765 43210</span>
             </a>

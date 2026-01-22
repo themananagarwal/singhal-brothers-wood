@@ -8,38 +8,42 @@ const products = [
     title: "Commercial Plywood",
     description: "High-quality commercial grade plywood for furniture, interiors, and general construction applications.",
     features: ["ISI Certified", "Multiple Grades", "Various Thicknesses"],
+    color: "primary",
   },
   {
     icon: Grid3X3,
     title: "Shuttering Plywood",
     description: "Heavy-duty shuttering plywood for concrete formwork in construction projects.",
     features: ["Water Resistant", "High Strength", "Reusable"],
+    color: "accent",
   },
   {
     icon: LayoutGrid,
     title: "Blockboards & MDF",
     description: "Premium blockboards and MDF panels for furniture manufacturing and interior applications.",
     features: ["Uniform Density", "Smooth Surface", "Easy to Work"],
+    color: "primary",
   },
   {
     icon: DoorOpen,
     title: "Flush Doors",
     description: "Quality flush doors for residential and commercial buildings with excellent finish.",
     features: ["Durable", "Termite Resistant", "Ready to Install"],
+    color: "accent",
   },
 ];
 
 const Products = () => {
   return (
-    <section id="products" className="py-24 bg-secondary/30 bg-wood-pattern">
+    <section id="products" className="py-24 bg-secondary/50 bg-wood-pattern">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block text-primary font-semibold mb-4 uppercase tracking-wider text-sm">
+          <span className="inline-block text-accent font-semibold mb-4 uppercase tracking-wider text-sm">
             Our Products
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Wholesale Wood Products
+            Wholesale <span className="text-primary">Wood</span> Products
           </h2>
           <p className="text-muted-foreground text-lg">
             We supply a comprehensive range of premium plywood and wood products 
@@ -56,8 +60,12 @@ const Products = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <product.icon className="w-7 h-7 text-primary" />
+                <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors ${
+                  product.color === "primary" 
+                    ? "bg-primary/10 group-hover:bg-primary/20" 
+                    : "bg-accent/10 group-hover:bg-accent/20"
+                }`}>
+                  <product.icon className={`w-7 h-7 ${product.color === "primary" ? "text-primary" : "text-accent"}`} />
                 </div>
                 <h3 className="font-display text-xl font-bold text-foreground mb-3">
                   {product.title}
@@ -68,12 +76,12 @@ const Products = () => {
                 <ul className="space-y-2 mb-6">
                   {product.features.map((feature) => (
                     <li key={feature} className="text-sm text-muted-foreground flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                      <span className={`w-1.5 h-1.5 rounded-full ${product.color === "primary" ? "bg-primary" : "bg-accent"}`} />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Button variant="ghost" className="w-full group-hover:text-primary">
+                <Button variant="ghost" className={`w-full ${product.color === "primary" ? "group-hover:text-primary" : "group-hover:text-accent"}`}>
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>

@@ -18,7 +18,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6 animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full mb-6 animate-fade-in">
             <Award className="w-4 h-4" />
             <span className="text-sm font-medium">Trusted Since 1998</span>
           </div>
@@ -26,7 +26,7 @@ const Hero = () => {
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Premium Quality
             <br />
-            <span className="text-primary">Plywood & Wood</span>
+            <span className="text-primary">Plywood</span> & <span className="text-accent">Wood</span>
             <br />
             Products
           </h1>
@@ -57,7 +57,7 @@ const Hero = () => {
             </div>
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <Users className="w-5 h-5 text-primary" />
+                <Users className="w-5 h-5 text-accent" />
                 <span className="text-3xl font-bold text-foreground">5000+</span>
               </div>
               <p className="text-sm text-muted-foreground">Happy Clients</p>

@@ -53,7 +53,14 @@ export default {
           dark: "hsl(var(--wood-dark))",
         },
         cream: "hsl(var(--cream))",
-        forest: "hsl(var(--forest))",
+        leather: {
+          DEFAULT: "hsl(var(--leather))",
+          light: "hsl(var(--leather-light))",
+        },
+        navy: {
+          DEFAULT: "hsl(var(--navy))",
+          light: "hsl(var(--navy-light))",
+        },
         gold: "hsl(var(--gold))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
