@@ -5,16 +5,19 @@ const values = [
     icon: History,
     title: "Legacy of Trust",
     description: "Since 1998, we've built relationships that span generations with our commitment to quality.",
+    color: "primary",
   },
   {
     icon: Target,
     title: "Quality First",
     description: "Every product meets stringent quality standards before reaching our customers.",
+    color: "accent",
   },
   {
     icon: Heart,
     title: "Customer Focus",
     description: "Your success is our priority. We go above and beyond to meet your requirements.",
+    color: "primary",
   },
 ];
 
@@ -25,13 +28,13 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="animate-fade-in">
-            <span className="inline-block text-primary font-semibold mb-4 uppercase tracking-wider text-sm">
+            <span className="inline-block text-accent font-semibold mb-4 uppercase tracking-wider text-sm">
               About Us
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
               A Family Business
               <br />
-              <span className="text-primary">Built on Trust</span>
+              <span className="text-primary">Built on</span> <span className="text-accent">Trust</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
               Founded in 1998 in Ahmedabad, Gujarat, Singhal Brothers has grown from a small 
@@ -46,14 +49,14 @@ const About = () => {
 
             <ul className="space-y-4">
               {[
-                "Wide range of ISI certified products",
-                "Competitive wholesale pricing",
-                "Timely delivery across Gujarat & India",
-                "Expert guidance on product selection",
+                { text: "Wide range of ISI certified products", color: "primary" },
+                { text: "Competitive wholesale pricing", color: "accent" },
+                { text: "Timely delivery across Gujarat & India", color: "primary" },
+                { text: "Expert guidance on product selection", color: "accent" },
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                  <span className="text-foreground">{item}</span>
+                <li key={item.text} className="flex items-center gap-3">
+                  <CheckCircle className={`w-5 h-5 flex-shrink-0 ${item.color === "primary" ? "text-primary" : "text-accent"}`} />
+                  <span className="text-foreground">{item.text}</span>
                 </li>
               ))}
             </ul>
@@ -64,11 +67,17 @@ const About = () => {
             {values.map((value, index) => (
               <div
                 key={value.title}
-                className="flex gap-5 p-6 bg-card rounded-xl border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg animate-fade-in"
+                className={`flex gap-5 p-6 bg-card rounded-xl border transition-all duration-300 hover:shadow-lg animate-fade-in ${
+                  value.color === "primary" 
+                    ? "border-primary/20 hover:border-primary/40" 
+                    : "border-accent/20 hover:border-accent/40"
+                }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <value.icon className="w-7 h-7 text-primary" />
+                <div className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                  value.color === "primary" ? "bg-primary/10" : "bg-accent/10"
+                }`}>
+                  <value.icon className={`w-7 h-7 ${value.color === "primary" ? "text-primary" : "text-accent"}`} />
                 </div>
                 <div>
                   <h3 className="font-display text-xl font-bold text-foreground mb-2">
