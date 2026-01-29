@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import singhalLogo from "@/assets/singhal-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,15 +19,10 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shadow-md">
-              <span className="text-primary-foreground font-display font-bold text-xl">SB</span>
-            </div>
-            <div>
-              <h1 className="font-display font-bold text-xl text-foreground">Singhal Brothers</h1>
-              <p className="text-xs text-accent font-medium">Since 1998</p>
-            </div>
-          </div>
+          <a href="#home" className="flex items-center gap-3">
+            <img src={singhalLogo} alt="Singhal Brothers" className="h-14 w-auto" />
+            <p className="text-xs text-accent font-medium">Since 1998</p>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
