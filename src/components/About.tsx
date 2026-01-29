@@ -34,7 +34,7 @@ const About = () => {
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
               A Family Business
               <br />
-              <span className="text-primary">Built on</span> <span className="text-accent">Trust</span>
+              Built on <span className="text-primary">Trust</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
               Founded in 1998 in Ahmedabad, Gujarat, Singhal Brothers has grown from a small 
@@ -42,7 +42,7 @@ const About = () => {
               plywood and wood products.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Our journey of over 25 years has been defined by unwavering commitment to 
+              Our journey of over 40 years has been defined by unwavering commitment to 
               quality, fair pricing, and lasting relationships with our dealers and customers 
               across India.
             </p>
@@ -50,9 +50,9 @@ const About = () => {
             <ul className="space-y-4">
               {[
                 { text: "Wide range of ISI certified products", color: "primary" },
-                { text: "Competitive wholesale pricing", color: "accent" },
+                { text: "Competitive wholesale pricing", color: "primary" },
                 { text: "Timely delivery across Gujarat & India", color: "primary" },
-                { text: "Expert guidance on product selection", color: "accent" },
+                { text: "Expert guidance on product selection", color: "primary" },
               ].map((item) => (
                 <li key={item.text} className="flex items-center gap-3">
                   <CheckCircle className={`w-5 h-5 flex-shrink-0 ${item.color === "primary" ? "text-primary" : "text-accent"}`} />
