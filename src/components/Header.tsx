@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3">
-            <img src={singhalLogo} alt="Singhal Brothers" className="h-14 w-auto" />
+            <img src={singhalLogo} alt="Singhal Brothers" className="h-25 w-auto" />
             <p className="text-xs text-accent font-medium">Since 1998</p>
           </a>
 
@@ -39,9 +39,9 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+919876543210" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
+            <a href="tel:+9198250 28300" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
               <Phone className="w-4 h-4" />
-              <span className="font-medium">+91 98765 43210</span>
+              <span className="font-medium">+91 98250 28300</span>
             </a>
             <Button variant="default">Get Quote</Button>
           </div>
