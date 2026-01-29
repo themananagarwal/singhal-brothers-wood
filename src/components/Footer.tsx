@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail } from "lucide-react";
+import singhalLogo from "@/assets/singhal-logo.png";
 
 const Footer = () => {
   return (
@@ -8,13 +9,8 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-primary font-display font-bold text-xl">SB</span>
-              </div>
-              <div>
-                <h3 className="font-display font-bold text-xl text-white">Singhal Brothers</h3>
-                <p className="text-xs text-white/70">Since 1998</p>
-              </div>
+              <img src={singhalLogo} alt="Singhal Brothers" className="h-12 w-auto bg-white rounded-lg p-2" />
+              <p className="text-xs text-white/70">Since 1998</p>
             </div>
             <p className="text-white/80 leading-relaxed">
               Gujarat's trusted wholesale supplier of premium plywood and wood products 
