@@ -21,7 +21,7 @@ const Header = () => {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3">
             <img src={singhalLogo} alt="Singhal Brothers" className="h-21 w-auto" />
-            <p className="text-xs text-accent font-medium">Since 1998</p>
+            <p className="text-xs text-accent font-medium">Since 1983</p>
           </a>
 
           {/* Desktop Navigation */}
