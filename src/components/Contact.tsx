@@ -16,7 +16,7 @@ const Contact = () => {
           </h2>
           <p className="text-muted-foreground text-lg">
             Ready to discuss your requirements? Reach out to us for wholesale inquiries, 
-            product information, or to visit our showroom.
+            product information, or to visit our store.
           </p>
         </div>
 
@@ -32,8 +32,8 @@ const Contact = () => {
               </h3>
               <p className="text-muted-foreground">
                 Singhal Brothers<br />
-                Timber Market, Rakhial<br />
-                Ahmedabad, Gujarat 380023
+                4, Ganesh Estate, Sarkhej<br />
+                Ahmedabad, Gujarat 382210
               </p>
             </CardContent>
           </Card>
@@ -65,7 +65,7 @@ const Contact = () => {
               </h3>
               <p className="text-muted-foreground">
                 Monday - Saturday<br />
-                9:00 AM - 7:00 PM
+                10:00 AM - 8:00 PM
               </p>
             </CardContent>
           </Card>
