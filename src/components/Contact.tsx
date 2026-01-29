@@ -47,10 +47,10 @@ const Contact = () => {
                 Call Us
               </h3>
               <p className="text-muted-foreground mb-2">
-                +91 98765 43210
+                +91 98250 28300
               </p>
               <p className="text-muted-foreground">
-                +91 79 2658 1234
+                +91 99783 28300
               </p>
             </CardContent>
           </Card>
