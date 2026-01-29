@@ -28,7 +28,7 @@ const milestones = [
 ];
 
 const MilestoneContent = ({ milestone, align }: { milestone: typeof milestones[0]; align: "left" | "right" }) => (
-  <div className={align === "left" ? "pr-4" : "pl-4"}>
+  <div className={align === "left" ? "pr-12" : "pl-12"}>
     <span
       className={`inline-block text-5xl font-display font-bold mb-3 ${
         milestone.color === "primary" ? "text-primary" : "text-accent"
