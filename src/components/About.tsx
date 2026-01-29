@@ -37,14 +37,15 @@ const About = () => {
               Built on <span className="text-primary">Trust</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              Founded in 1998 in Ahmedabad, Gujarat, Singhal Brothers has grown from a small 
-              family venture to one of the region's most trusted wholesale suppliers of 
-              plywood and wood products.
+              Our story began in 1993 with Ayeng Wood Products in Arunachal Pradesh. 
+              In 1998, we expanded to Ahmedabad with Singhal Brothers, growing into one of 
+              Gujarat's most trusted wholesale suppliers of plywood and wood products.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Our journey of over 40 years has been defined by unwavering commitment to 
+              Our journey of over 30 years has been defined by unwavering commitment to 
               quality, fair pricing, and lasting relationships with our dealers and customers 
-              across India.
+              across India. In 2023, we launched Singhal Studio to bring premium decorative 
+              surfaces directly to design enthusiasts.
             </p>
 
             <ul className="space-y-4">
