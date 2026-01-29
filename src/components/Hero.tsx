@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full mb-6 animate-fade-in">
             <Award className="w-4 h-4" />
-            <span className="text-sm font-medium">Trusted Since 1993</span>
+            <span className="text-sm font-medium">Trusted Since 1985</span>
           </div>
 
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
@@ -33,7 +33,7 @@ const Hero = () => {
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Gujarat's trusted wholesale supplier of plywood, blockboards, flushdoors, and MDFs. 
-            Building trust with quality for over 30 years.
+            Building trust with quality for over 40 years.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
@@ -51,7 +51,7 @@ const Hero = () => {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Building2 className="w-5 h-5 text-primary" />
-                <span className="text-3xl font-bold text-foreground">30+</span>
+                <span className="text-3xl font-bold text-foreground">40+</span>
               </div>
               <p className="text-sm text-muted-foreground">Years of Legacy</p>
             </div>
