@@ -22,7 +22,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <Helmet>
-            <link rel="icon" type="image/png" href="/favicon.png?v=4" />
+            <link rel="icon" type="image/png" href="/favicon.png?v=5" />
           </Helmet>
           <BrowserRouter>
             <ScrollToTop />
