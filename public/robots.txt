@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://singhalbrothers.com/sitemap.xml
+Sitemap: https://singhalbrothers.in/sitemap.xml

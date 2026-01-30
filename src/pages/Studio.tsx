@@ -31,7 +31,7 @@ const StudioPage = () => {
                 <title>Singhal Studio | Luxury Decorative Veneers & Designer Wood Ahmedabad</title>
                 <meta name="description" content="Singhal Studio - Redefining luxury surfaces. Discover premium decorative solutions, exotic veneers, and designer laminates. Find the finest luxury veneer shop near you in Ahmedabad." />
                 <meta name="keywords" content="Singhal Studio, luxury veneer shop near me, designer wood near me, Luxury Veneers Ahmedabad, Decorative Surface Design, Designer Wood Finishes Gujarat, Exotic Veneers Ahmedabad, Singhal Decor Luxury Alternative, premium laminates Ahmedabad" />
-                <link rel="canonical" href="https://singhalbrothers.com/studio" />
+                <link rel="canonical" href="https://singhalbrothers.in/studio" />
             </Helmet>
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2 animate-pulse" />

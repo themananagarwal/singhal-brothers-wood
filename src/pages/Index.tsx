@@ -15,7 +15,7 @@ const Index = () => {
         <title>Singhal Brothers Plywood | Premium Wood & Veneers in Ahmedabad</title>
         <meta name="description" content="Singhal Brothers Plywood - Gujarat's leading supplier of premium plywood, designer veneers, and custom wood solutions. Trusted by wholesalers and builders since 1998 in Ahmedabad." />
         <meta name="keywords" content="Singhal Brothers Plywood, Singhal Marketing, Singhal Decor, Singhal, Brothers, Plywood, Laminates, Blockboards, Shuttering Ply, Flushdoors, MDF, Century MDF, DIR, DWR, HDHMR, Premium Plus, Action Tesa, Paramount, singhalply.com, Hill Wood, Flexi Ply, Green Tree, Singhal Marketing Plywood, Singhal Decor Plywood, Akshat Agarwal Plywood, Abhishek Agarwal Plywood, Manoj Agarwal Plywood, Abhishek Agarwal, Akshat Agarwal, Manoj Agarwal, Kailash Agarwal, Manav Agarwal, PMC Vendor, PMC Plywood Vendor, Singhal Brothers, Singhal Studio, Plywood shop near me, wholesale plywood near me, Singhal Brothers Plywood, Singhal Marketing alternative, Singhal Decor alternative, Plywood Ahmedabad, Best Plywood Wholesaler Ahmedabad, Veneers and Laminates Gujarat, Singhal Ply Ahmedabad, ISI grade plywood near me, shuttering plywood wholesale, wood dealers Ahmedabad" />
-        <link rel="canonical" href="https://singhalbrothers.com" />
+        <link rel="canonical" href="https://singhalbrothers.in" />
         <script type="application/ld+json">
           {`
             {
@@ -24,7 +24,7 @@ const Index = () => {
               "name": "Singhal Brothers",
               "description": "Gujarat's leading supplier of premium plywood, blockboards, and designer veneers. Trusted by wholesalers and homeowners since 1998.",
               "alternateName": ["Singhal Studio", "Singhal Ply Ahmedabad", "Singhal Marketing", Singhal Decor", "Plywood Indiamart", "Plywood Gujarat", "Plywood Ahmedabad" ],
-              "url": "https://singhalbrothers.com",
+              "url": "https://singhalbrothers.in",
               "telephone": "+91 98250 28300",
               "address": {
                 "@type": "PostalAddress",

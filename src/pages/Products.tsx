@@ -423,7 +423,7 @@ const ProductsPage = () => {
                 <title>Wood & Plywood Products | Singhal Brothers Catalog</title>
                 <meta name="description" content="Explore our wide range of premium plywood, blockboards, and flush doors. Find the best plywood shop near you for wholesale industrial and home solutions in Ahmedabad." />
                 <meta name="keywords" content="Singhal Brothers Products, Plywood shop near me, wholesale plywood near me, ISI plywood wholesalers near me, Plywood Catalog, MDF Boards Ahmedabad, Flush Doors Ahmedabad, Blockboards Gujarat, Shuttering Plywood Supplier, best wood shop near me" />
-                <link rel="canonical" href="https://singhalbrothers.com/products" />
+                <link rel="canonical" href="https://singhalbrothers.in/products" />
             </Helmet>
             <Header />
 
