@@ -9,7 +9,7 @@ import Studio from "./pages/Studio";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 import { CartProvider } from "./context/CartContext";
 
 const queryClient = new QueryClient();
@@ -21,9 +21,6 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <Helmet>
-            <link rel="icon" type="image/png" href="/favicon.png?v=5" />
-          </Helmet>
           <BrowserRouter>
             <ScrollToTop />
             <Routes>
