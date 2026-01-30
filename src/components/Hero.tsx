@@ -1,8 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Users, Building2 } from "lucide-react";
 import heroImage from "@/assets/hero-plywood.jpg";
+import { AnimatedNumber } from "./AnimatedNumber";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20">
       {/* Background Image */}
@@ -32,17 +48,31 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Gujarat's trusted wholesale supplier of plywood, blockboards, flushdoors, and MDFs. 
+            Gujarat's trusted wholesale supplier of plywood, blockboards, flushdoors, and MDFs.
             Building trust with quality for over 40 years.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button variant="hero" size="xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10 animate-fade-in max-w-lg" style={{ animationDelay: "0.3s" }}>
+            <Button variant="hero" size="lg" onClick={() => navigate("/products")} className="w-full">
               Explore Products
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4" />
             </Button>
-            <Button variant="heroOutline" size="xl">
-              Visit Singhal Studio
+            <Button
+              variant="heroOutline"
+              size="lg"
+              onClick={() => window.open("https://maps.app.goo.gl/hyDpeWmxEhGPPov47?g_st=ic", "_blank", "noopener,noreferrer")}
+              className="w-full"
+            >
+              Visit Singhal Brothers
+            </Button>
+            <Button
+              variant="accent"
+              size="lg"
+              className="sm:col-span-2 w-full shadow-lg hover:shadow-xl transition-all font-bold"
+              onClick={() => navigate("/studio")}
+            >
+              Explore Singhal Studio
+              <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
 
@@ -51,21 +81,27 @@ const Hero = () => {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Building2 className="w-5 h-5 text-primary" />
-                <span className="text-3xl font-bold text-foreground">40+</span>
+                <span className="text-3xl font-bold text-foreground">
+                  <AnimatedNumber value={40} suffix="+" />
+                </span>
               </div>
               <p className="text-sm text-muted-foreground">Years of Legacy</p>
             </div>
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <Users className="w-5 h-5 text-accent" />
-                <span className="text-3xl font-bold text-foreground">5000+</span>
+                <Users className="w-5 h-5 text-primary" />
+                <span className="text-3xl font-bold text-foreground">
+                  <AnimatedNumber value={5000} suffix="+" />
+                </span>
               </div>
               <p className="text-sm text-muted-foreground">Happy Clients</p>
             </div>
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Award className="w-5 h-5 text-primary" />
-                <span className="text-3xl font-bold text-foreground">100+</span>
+                <span className="text-3xl font-bold text-foreground">
+                  <AnimatedNumber value={100} suffix="+" />
+                </span>
               </div>
               <p className="text-sm text-muted-foreground">Product Varieties</p>
             </div>

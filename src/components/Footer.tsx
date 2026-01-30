@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail } from "lucide-react";
-import singhalLogo from "@/assets/singhal-logo.png";
+import singhalLogo from "@/assets/singhal-logo-new.png";
 
 const Footer = () => {
   return (
@@ -9,11 +9,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <img src={singhalLogo} alt="Singhal Brothers" className="h-12 w-auto bg-white rounded-lg p-2" />
+              <img src={singhalLogo} alt="Singhal Brothers" className="h-10 w-auto bg-white rounded-lg p-2" />
               <p className="text-xs text-white/70">Since 1998</p>
             </div>
             <p className="text-white/80 leading-relaxed">
-              Gujarat's trusted wholesale supplier of premium plywood and wood products 
+              Gujarat's trusted wholesale supplier of premium plywood and wood products
               for over 25 years.
             </p>
           </div>
@@ -26,7 +26,7 @@ const Footer = () => {
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(" ", "-")}`}
-                    className="text-white/70 hover:text-accent transition-colors"
+                    className="text-white/70 hover:text-white transition-colors"
                   >
                     {link}
                   </a>
@@ -52,18 +52,23 @@ const Footer = () => {
             <h4 className="font-display font-bold text-lg mb-6 text-white">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <span className="text-white/70">
-                  Timber Market, Rakhial<br />
-                  Ahmedabad, Gujarat 380023
-                </span>
+                <MapPin className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                <a
+                  href="https://maps.app.goo.gl/hyDpeWmxEhGPPov47?g_st=ic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-white transition-colors"
+                >
+                  4, Ganesh Estate, Sarkhej<br />
+                  Ahmedabad, Gujarat 382210
+                </a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-white/70">+91 98765 43210</span>
+                <Phone className="w-5 h-5 text-white flex-shrink-0" />
+                <span className="text-white/70">+91 98250 28300</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-accent flex-shrink-0" />
+                <Mail className="w-5 h-5 text-white flex-shrink-0" />
                 <span className="text-white/70">info@singhalbrothers.com</span>
               </li>
             </ul>

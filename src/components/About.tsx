@@ -1,4 +1,5 @@
 import { CheckCircle, History, Target, Heart } from "lucide-react";
+import { motion } from "framer-motion";
 
 const values = [
   {
@@ -11,7 +12,7 @@ const values = [
     icon: Target,
     title: "Quality First",
     description: "Every product meets stringent quality standards before reaching our customers.",
-    color: "accent",
+    color: "primary",
   },
   {
     icon: Heart,
@@ -27,8 +28,14 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
-          <div className="animate-fade-in">
-            <span className="inline-block text-accent font-semibold mb-4 uppercase tracking-wider text-sm">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left"
+          >
+            <span className="inline-block text-primary font-semibold mb-4 uppercase tracking-wider text-sm">
               About Us
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -37,14 +44,14 @@ const About = () => {
               Built on <span className="text-primary">Trust</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              Our story began in 1993 with Ayeng Wood Products in Arunachal Pradesh. 
-              In 1998, we expanded to Ahmedabad with Singhal Brothers, growing into one of 
+              Our story began in 1993 with Ayeng Wood Products in Arunachal Pradesh.
+              In 1998, we expanded to Ahmedabad with Singhal Brothers, growing into one of
               Gujarat's most trusted wholesale suppliers of plywood and wood products.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Our journey of over 30 years has been defined by unwavering commitment to 
-              quality, fair pricing, and lasting relationships with our dealers and customers 
-              across India. In 2023, we launched Singhal Studio to bring premium decorative 
+              Our journey of over 30 years has been defined by unwavering commitment to
+              quality, fair pricing, and lasting relationships with our dealers and customers
+              across India. In 2023, we launched Singhal Studio to bring premium decorative
               surfaces directly to design enthusiasts.
             </p>
 
@@ -54,30 +61,38 @@ const About = () => {
                 { text: "Competitive wholesale pricing", color: "primary" },
                 { text: "Timely delivery across Gujarat & India", color: "primary" },
                 { text: "Expert guidance on product selection", color: "primary" },
-              ].map((item) => (
-                <li key={item.text} className="flex items-center gap-3">
+              ].map((item, index) => (
+                <motion.li
+                  key={item.text}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  className="flex items-center gap-3 justify-center lg:justify-start"
+                >
                   <CheckCircle className={`w-5 h-5 flex-shrink-0 ${item.color === "primary" ? "text-primary" : "text-accent"}`} />
                   <span className="text-foreground">{item.text}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Values */}
           <div className="space-y-6">
             {values.map((value, index) => (
-              <div
+              <motion.div
                 key={value.title}
-                className={`flex gap-5 p-6 bg-card rounded-xl border transition-all duration-300 hover:shadow-lg animate-fade-in ${
-                  value.color === "primary" 
-                    ? "border-primary/20 hover:border-primary/40" 
-                    : "border-accent/20 hover:border-accent/40"
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className={`flex gap-5 p-6 bg-card rounded-xl border transition-all duration-300 hover:shadow-lg ${value.color === "primary"
+                  ? "border-primary/20 hover:border-primary/40"
+                  : "border-accent/20 hover:border-accent/40"
+                  }`}
               >
-                <div className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                  value.color === "primary" ? "bg-primary/10" : "bg-accent/10"
-                }`}>
+                <div className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 ${value.color === "primary" ? "bg-primary/10" : "bg-accent/10"
+                  }`}>
                   <value.icon className={`w-7 h-7 ${value.color === "primary" ? "text-primary" : "text-accent"}`} />
                 </div>
                 <div>
@@ -88,7 +103,7 @@ const About = () => {
                     {value.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
