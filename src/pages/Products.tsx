@@ -27,13 +27,17 @@ const categories = ["All", "Plywood", "Shuttering Plywood", "Blockboards", "MDF"
 type Category = typeof categories[number];
 const individualCategories = categories.filter(c => c !== "All");
 
+const placeholderGrey = "https://placehold.co/600x400/e2e8f0/64748b?text=Singhal+Brothers";
+
 interface Product {
     id: string;
     name: string;
     category: Category;
-    type: "Commercial" | "MR" | "BWP" | "Decorative" | "Other";
+    type: "Commercial" | "MR" | "BWP" | "BWR" | "Decorative" | "Other";
     size: string;
     face: string;
+    coreType?: string;
+    coreColor?: string;
     thickness?: string;
     description: string;
     image: string;
@@ -42,6 +46,151 @@ interface Product {
 }
 
 const productData: Product[] = [
+    // SIPL 303 (Order #1)
+    {
+        id: "p-sipl-303",
+        name: "SIPL 303 Ply",
+        category: "Plywood",
+        type: "BWR",
+        size: "8x4",
+        face: "Gurjan Face",
+        coreType: "Full Core Full Panel",
+        coreColor: "All Red Core",
+        thickness: "6mm, 9mm, 12mm, 18mm",
+        description: "BWR Grade, 100% Calibrated in 12 and 18 mm.",
+        image: placeholderGrey,
+        availableSizes: ["8x4", "7x4", "6x4", "7x3", "6x3"],
+        availableThicknesses: ["6mm", "9mm", "12mm", "18mm"]
+    },
+    // SIPL 710 (Order #2)
+    {
+        id: "p-sipl-710",
+        name: "SIPL 710 Ply",
+        category: "Plywood",
+        type: "BWP",
+        size: "8x4",
+        face: "Gurjan Face",
+        coreType: "Full Core Full Panel",
+        coreColor: "All Red Core",
+        thickness: "6mm, 9mm, 12mm, 18mm",
+        description: "BWP Grade, 100% Calibrated in 12 and 18 mm.",
+        image: placeholderGrey,
+        availableSizes: ["8x4", "7x4", "6x4", "7x3", "6x3"],
+        availableThicknesses: ["6mm", "9mm", "12mm", "18mm"]
+    },
+    // Paramount BWR (Order #3)
+    {
+        id: "p-paramount-bwr",
+        name: "Paramount BWR Ply",
+        category: "Plywood",
+        type: "BWR",
+        size: "8x4",
+        face: "Gurjan Face",
+        coreType: "Full Core Full Panel",
+        coreColor: "Red & White (Alternate)",
+        thickness: "6mm, 9mm, 12mm, 18mm",
+        description: "BWR Grade, Semi Calibrated.",
+        image: placeholderGrey,
+        availableSizes: ["8x4", "7x4", "6x4", "7x3", "6x3"],
+        availableThicknesses: ["6mm", "9mm", "12mm", "18mm"]
+    },
+    // Paramount BWP (Order #4)
+    {
+        id: "p-paramount-bwp",
+        name: "Paramount BWP Ply",
+        category: "Plywood",
+        type: "BWP",
+        size: "8x4",
+        face: "Gurjan Face",
+        coreType: "Full Core Full Panel",
+        coreColor: "All Red Core",
+        thickness: "6mm, 9mm, 12mm, 18mm",
+        description: "BWP Grade 710 certified, Semi Calibrated.",
+        image: placeholderGrey,
+        availableSizes: ["8x4", "7x4", "6x4", "7x3", "6x3"],
+        availableThicknesses: ["6mm", "9mm", "12mm", "18mm"]
+    },
+    // Kespar (Order #5)
+    {
+        id: "p-kespar",
+        name: "Kespar Ply",
+        category: "Plywood",
+        type: "BWP",
+        size: "8x4",
+        face: "Gurjan Face",
+        coreType: "Full Core Full Panel",
+        coreColor: "All Red Core",
+        thickness: "6mm, 9mm, 12mm, 18mm",
+        description: "BWP Grade 710 certified, Semi Calibrated.",
+        image: placeholderGrey,
+        availableSizes: ["8x4", "7x4", "6x4", "7x3", "6x3"],
+        availableThicknesses: ["6mm", "9mm", "12mm", "18mm"]
+    },
+    // Wood9 (Order #6)
+    {
+        id: "p-wood9",
+        name: "Wood9 Ply",
+        category: "Plywood",
+        type: "MR",
+        size: "8x4",
+        face: "Okume Face",
+        coreType: "Full Core Full Panel",
+        coreColor: "Red & White (Alternate)",
+        thickness: "6mm, 9mm, 12mm, 18mm",
+        description: "MR Grade.",
+        image: placeholderGrey,
+        availableSizes: ["8x4", "7x4", "6x4", "7x3", "6x3"],
+        availableThicknesses: ["6mm", "9mm", "12mm", "18mm"]
+    },
+    // British Club (Order #7)
+    {
+        id: "p-british-club",
+        name: "British Club Ply",
+        category: "Plywood",
+        type: "BWR",
+        size: "8x4",
+        face: "Gurjan Face",
+        coreType: "Full Core Full Panel",
+        coreColor: "Red & White (Alternate)",
+        thickness: "6mm, 9mm, 12mm, 18mm",
+        description: "BWR Grade, Chemical Treated.",
+        image: placeholderGrey,
+        availableSizes: ["8x4", "7x4", "6x4", "7x3", "6x3"],
+        availableThicknesses: ["6mm", "9mm", "12mm", "18mm"]
+    },
+    // V Ply (Order #8)
+    {
+        id: "p-v-ply",
+        name: "V Ply",
+        category: "Plywood",
+        type: "BWR",
+        size: "8x4",
+        face: "Gurjan Face",
+        coreType: "Full Core Full Panel",
+        coreColor: "Red & White (Alternate)",
+        thickness: "6mm, 9mm, 12mm, 18mm",
+        description: "BWR Grade.",
+        image: placeholderGrey,
+        availableSizes: ["8x4", "7x4", "6x4", "7x3", "6x3"],
+        availableThicknesses: ["6mm", "9mm", "12mm", "18mm"]
+    },
+    // Eco Plus (Order #9)
+    {
+        id: "p-eco-plus",
+        name: "Eco Plus Ply",
+        category: "Plywood",
+        type: "BWR",
+        size: "8x4",
+        face: "Gurjan Face",
+        coreType: "Full Core Full Panel",
+        coreColor: "Red & White (Alternate)",
+        thickness: "6mm, 9mm, 12mm, 18mm",
+        description: "BWR Grade.",
+        image: placeholderGrey,
+        availableSizes: ["8x4", "7x4", "6x4", "7x3", "6x3"],
+        availableThicknesses: ["6mm", "9mm", "12mm", "18mm"]
+    },
+    // Existing MDF (User wanted to keep these)
     {
         id: "m2",
         name: "Century Prowud MDF DIR",
@@ -81,65 +230,118 @@ const productData: Product[] = [
         availableSizes: ["8' x 4'"],
         availableThicknesses: ["3mm", "6mm", "8mm", "12mm", "18mm", "25mm"]
     },
+    // SIPL Blockboards (Different cards for 19mm and 25mm)
     {
-        id: "p1",
-        name: "Premium Gurjan Plywood",
-        category: "Plywood",
-        type: "BWP",
-        size: "8' x 4'",
-        face: "Gurjan",
-        description: "Boiling Water Proof grade plywood with premium Gurjan face for high-end furniture and construction.",
-        image: "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?q=80&w=2070&auto=format&fit=crop",
-        availableSizes: ["8' x 4'", "7' x 4'", "8' x 3'", "7' x 3'"],
-        availableThicknesses: ["6mm", "12mm", "16mm", "19mm", "25mm"]
-    },
-    {
-        id: "p2",
-        name: "Classic MR Plywood",
-        category: "Plywood",
-        type: "MR",
-        size: "8' x 4'",
-        face: "Mixed Hardwood",
-        description: "Moisture Resistant grade plywood suitable for interior woodwork and partitions.",
-        image: "https://images.unsplash.com/photo-1565193998248-d50c6082982d?q=80&w=2070&auto=format&fit=crop",
-        availableSizes: ["8' x 4'", "7' x 4'", "8' x 3'", "7' x 3'"],
-        availableThicknesses: ["6mm", "12mm", "16mm", "19mm"]
-    },
-    {
-        id: "b1",
-        name: "Pine Core Blockboard",
+        id: "bb-sipl-19",
+        name: "SIPL Blockboard (19mm)",
         category: "Blockboards",
         type: "Commercial",
-        size: "8' x 4'",
-        face: "Hardwood",
-        description: "Solid pine core blockboard with excellent screw-holding capacity and resistance to warping.",
-        image: "https://images.unsplash.com/photo-1517646288304-464a93c784ad?q=80&w=2070&auto=format&fit=crop",
-        availableSizes: ["8' x 4'"],
-        availableThicknesses: ["19mm", "25mm"]
+        size: "8x4",
+        face: "Gurjan Face",
+        coreType: "Double Core",
+        coreColor: "100% Pine Wood",
+        thickness: "19mm",
+        description: "Calibrated blockboard for high strength.",
+        image: placeholderGrey,
+        availableSizes: ["8x4", "7x4"],
+        availableThicknesses: ["19mm"]
     },
     {
-        id: "f1",
-        name: "Solid Core Flush Door",
+        id: "bb-sipl-25",
+        name: "SIPL Blockboard (25mm)",
+        category: "Blockboards",
+        type: "Commercial",
+        size: "8x4",
+        face: "Gurjan Face",
+        coreType: "Triple Core",
+        coreColor: "100% Pine Wood",
+        thickness: "25mm",
+        description: "Calibrated blockboard for high strength.",
+        image: placeholderGrey,
+        availableSizes: ["8x4", "7x4"],
+        availableThicknesses: ["25mm"]
+    },
+    // Shuttering Plywood
+    {
+        id: "sp-metroplex-30",
+        name: "Metroplex Shuttering Ply 30Kg",
+        category: "Shuttering Plywood",
+        type: "Other",
+        size: "8x4",
+        face: "MUF Grade",
+        coreColor: "Red Film",
+        description: "MUF Grade Shuttering Plywood. 30Kg specification, ideal for construction formwork.",
+        image: placeholderGrey,
+        availableSizes: ["8x4"],
+        availableThicknesses: ["12mm"]
+    },
+    {
+        id: "sp-nitro-30",
+        name: "Nitro Shuttering Ply 30Kg",
+        category: "Shuttering Plywood",
+        type: "Other",
+        size: "8x4",
+        face: "Film Faced",
+        coreColor: "Red/Black Film",
+        description: "Film Faced, All Glue Line Core. 100% Waterproof. 30 Kg specification.",
+        image: placeholderGrey,
+        availableSizes: ["8x4"],
+        availableThicknesses: ["12mm"]
+    },
+    {
+        id: "sp-nitro-34",
+        name: "Nitro Shuttering Ply 34Kg",
+        category: "Shuttering Plywood",
+        type: "Other",
+        size: "8x4",
+        face: "Film Faced",
+        coreColor: "Red/Black Film",
+        description: "Film Faced, All Glue Line Core. 100% Waterproof. 34 Kg specification.",
+        image: placeholderGrey,
+        availableSizes: ["8x4"],
+        availableThicknesses: ["12mm"]
+    },
+    {
+        id: "sp-orbi-30",
+        name: "Orbi Shuttering Ply 30kg",
+        category: "Shuttering Plywood",
+        type: "Other",
+        size: "8x4",
+        face: "Mirror Finish",
+        coreColor: "Red/Black Film",
+        description: "Mirror Finish, All Glue Line Core. Dent Free, 100% Waterproof. 30 kg specification.",
+        image: placeholderGrey,
+        availableSizes: ["8x4"],
+        availableThicknesses: ["12mm"]
+    },
+    {
+        id: "sp-orbi-34",
+        name: "Orbi Shuttering Ply 34kg",
+        category: "Shuttering Plywood",
+        type: "Other",
+        size: "8x4",
+        face: "Mirror Finish",
+        coreColor: "Red/Black Film",
+        description: "Mirror Finish, All Glue Line Core. Dent Free, 100% Waterproof. 34 kg specification.",
+        image: placeholderGrey,
+        availableSizes: ["8x4"],
+        availableThicknesses: ["12mm"]
+    },
+    // Flushdoors
+    {
+        id: "fd-pine",
+        name: "SIPL Flushdoor",
         category: "Flushdoors",
         type: "Other",
-        size: "81\" x 36\"",
-        face: "Teak Finish",
-        description: "Premium solid core flush door with exceptional strength and elegant teak-textured finish.",
-        image: "https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=2070&auto=format&fit=crop",
-        availableSizes: ["81\" x 36\"", "81\" x 32\"", "81\" x 27\"", "78\" x 36\"", "78\" x 27\""],
-        availableThicknesses: ["30mm", "35mm", "40mm"]
-    },
-    {
-        id: "p3",
-        name: "Waterproof Marine Plywood",
-        category: "Plywood",
-        type: "BWP",
-        size: "8' x 4'",
-        face: "Keruing",
-        description: "Specifically engineered for areas with high moisture exposure, like kitchens and bathrooms.",
-        image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop",
-        availableSizes: ["8' x 4'", "7' x 4'"],
-        availableThicknesses: ["6mm", "12mm", "19mm"]
+        size: "Variable",
+        face: "Gurjan Face",
+        coreType: "Solid Core",
+        coreColor: "100% Pine Wood",
+        thickness: "30mm, 35mm",
+        description: "Calibrated. High strength and durability.",
+        image: placeholderGrey,
+        availableSizes: ["81x36", "81x32", "81x27", "78x36", "78x27"],
+        availableThicknesses: ["30mm", "35mm"]
     }
 ];
 
@@ -317,13 +519,29 @@ const ProductsPage = () => {
                                         <CardContent className="flex-1 space-y-4">
                                             <div className="grid grid-cols-2 gap-4">
                                                 <div className="bg-secondary/50 p-3 rounded-lg border border-border/50">
-                                                    <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">Standard Size</p>
+                                                    <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">Base Size</p>
                                                     <p className="text-sm font-bold text-foreground">{product.size}</p>
                                                 </div>
-                                                <div className="bg-secondary/50 p-3 rounded-lg border border-border/50">
-                                                    <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">Face</p>
-                                                    <p className="text-sm font-bold text-foreground">{product.face}</p>
-                                                </div>
+                                                {product.category !== "Shuttering Plywood" && (
+                                                    <div className="bg-secondary/50 p-3 rounded-lg border border-border/50">
+                                                        <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">Face</p>
+                                                        <p className="text-sm font-bold text-foreground">{product.face}</p>
+                                                    </div>
+                                                )}
+                                                {product.category !== "Shuttering Plywood" && product.coreType && (
+                                                    <div className="bg-secondary/50 p-3 rounded-lg border border-border/50">
+                                                        <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">Core Type</p>
+                                                        <p className="text-sm font-bold text-foreground">{product.coreType}</p>
+                                                    </div>
+                                                )}
+                                                {product.coreColor && (
+                                                    <div className="bg-secondary/50 p-3 rounded-lg border border-border/50">
+                                                        <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">
+                                                            {product.category === "Shuttering Plywood" ? "Film Color" : "Core Color/Wood"}
+                                                        </p>
+                                                        <p className="text-sm font-bold text-foreground">{product.coreColor}</p>
+                                                    </div>
+                                                )}
                                                 {product.thickness && (
                                                     <div className="bg-secondary/50 p-3 rounded-lg border border-border/50 col-span-2">
                                                         <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">Thickness Options</p>
