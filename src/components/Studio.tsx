@@ -95,9 +95,9 @@ const Studio = () => {
             <Button
               size="lg"
               className="rounded-xl px-10 h-14 text-white bg-gold hover:bg-gold/90 shadow-xl shadow-gold/20 hover:scale-105 transition-transform font-bold"
-              onClick={() => window.open(`https://wa.me/919825028300?text=${encodeURIComponent("Hi Singhal Studio, I'm interested in exploring your luxury decorative surfaces and veneers.")}`, "_blank")}
+              onClick={() => window.open("https://singhalstudio.com", "_blank")}
             >
-              Consult an Expert
+              Explore Singhal Studio
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </motion.div>
