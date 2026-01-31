@@ -72,6 +72,20 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "studio-primary": {
+          DEFAULT: '#F58220',
+          light: '#FF9944',
+          dark: '#D46B12',
+        },
+        charcoal: {
+          DEFAULT: '#1A1A1A',
+          light: '#2D2D2D',
+          dark: '#0D0D0D',
+        },
+        ivory: {
+          DEFAULT: '#F5F5F5',
+          dark: '#E0E0E0',
+        }
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -156,4 +156,58 @@
   .bg-wood-pattern {
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a0845c' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
+
+  /* Singhal Studio Styles */
+  .luxury-button {
+    position: relative;
+    padding: 0.75rem 2rem;
+    background-color: transparent;
+    border: 1px solid #F58220;
+    color: #F58220;
+    font-weight: 700;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .luxury-button:hover {
+    background-color: #F58220;
+    color: #1A1A1A;
+  }
+
+  .luxury-button:active {
+    transform: scale(0.95);
+  }
+
+  .luxury-card {
+    background-color: #2D2D2D;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0.125rem;
+    padding: 1.5rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .luxury-card:hover {
+    border-color: rgba(245, 130, 32, 0.3);
+    box-shadow: 0 0 30px rgba(245, 130, 32, 0.05);
+  }
+
+  .text-luxury-gradient {
+    background: linear-gradient(to right, #F58220, #FF9944, #D46B12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .animate-slow-zoom {
+    animation: slowZoom 20s infinite alternate ease-in-out;
+  }
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }
