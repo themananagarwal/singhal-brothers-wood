@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Palette, Layers, PanelTop } from "lucide-react";
 import studioImage from "@/assets/studio-showroom.jpg";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const studioProducts = [
   { icon: Palette, name: "Veneers", description: "Natural & engineered veneers" },
@@ -13,6 +14,7 @@ const studioProducts = [
 import studioLogo from "@/assets/studio-logo.png";
 
 const Studio = () => {
+  const navigate = useNavigate();
   return (
     <section id="studio" className="py-24 bg-background relative overflow-hidden">
       {/* Background decoration - Leaning more into Gold */}
@@ -95,7 +97,7 @@ const Studio = () => {
             <Button
               size="lg"
               className="rounded-xl px-10 h-14 text-white bg-gold hover:bg-gold/90 shadow-xl shadow-gold/20 hover:scale-105 transition-transform font-bold"
-              onClick={() => window.location.href = "/studio"}
+              onClick={() => navigate("/studio")}
             >
               Explore Singhal Studio
               <ArrowRight className="w-4 h-4 ml-2" />
