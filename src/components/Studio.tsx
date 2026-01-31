@@ -95,7 +95,7 @@ const Studio = () => {
             <Button
               size="lg"
               className="rounded-xl px-10 h-14 text-white bg-gold hover:bg-gold/90 shadow-xl shadow-gold/20 hover:scale-105 transition-transform font-bold"
-              onClick={() => window.open("https://singhalstudio.com", "_blank")}
+              onClick={() => window.location.href = "/studio"}
             >
               Explore Singhal Studio
               <ArrowRight className="w-4 h-4 ml-2" />
